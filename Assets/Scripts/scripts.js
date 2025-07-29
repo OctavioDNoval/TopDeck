@@ -152,8 +152,12 @@ function mostrarProductos() {
                     name.classList.add("cart-product-name");
 
                     const price = document.createElement("p");
-                    price.innerHTML = `$ ${item.price} x ${item.quantity}`;
+                    price.innerHTML = `$ ${item.price}`;
                     price.classList.add("cart-product-price");
+
+                    const detail = document.createElement("p");
+                    detail.classList.add("cart-product-detail");
+                    detail.innerHTML = "Presione para detalles";
 
                     const deleteBtn = document.createElement("button");
                     deleteBtn.innerHTML = "X";
@@ -170,6 +174,34 @@ function mostrarProductos() {
                     product.appendChild(name);
                     product.appendChild(price);
                     product.appendChild(deleteBtn);
+                    product.appendChild(detail);
+
+                    const numberDiv = document.createElement("div");
+                    numberDiv.classList.add("card-product-inputnum-container");
+                    const btnRest = document.createElement("button");
+                    btnRest.innerHTML = "-";
+                    btnRest.classList.add("btn-input");
+                    const inputNum = document.createElement("input");
+                    inputNum.type = "number";
+                    inputNum.min = 1;
+                    inputNum.value = item.quantity;
+                    const btnAdd = document.createElement("button");
+                    btnAdd.innerHTML = "+";
+                    btnAdd.classList.add("btn-input");
+
+                    numberDiv.appendChild(btnRest);
+                    numberDiv.appendChild(inputNum);
+                    numberDiv.appendChild(btnAdd);
+
+                    numberDiv.addEventListener("click", (e) => {
+                        e.stopPropagation();
+                    });
+
+                    product.appendChild(numberDiv);
+
+                    product.addEventListener("click", () => {
+                        numberDiv.style.display = numberDiv.style.display === "none" ? "flex" : "none";
+                    });
 
                     cartSection.insertBefore(product, cartResume);
                     void product.offsetWidth;
