@@ -49,33 +49,40 @@ document.querySelectorAll(".add-product-btn").forEach((btn) => {
 });
 
 function abrirCarrito() {
-    //Usamos getcomputstyle para poder acceder
-    //a los estilos del elemento de la hoja de estilos
     const height = parseInt(getComputedStyle(cartSection).height);
     const img = document.getElementById("img-cart");
 
     if (height <= 0) {
-        // el carrito está cerrado
+        // El carrito está cerrado, lo abrimos
         cartSection.style.height = "90%";
         cartSection.style.width = "90%";
         img.src = "Assets/Pics/Iconos/x.webp";
         cartSection.innerHTML = "";
         mostrarProductos();
+
+        // Mostramos el icono del carrito por si estaba oculto
+        cartElemnt.style.right = "5%";
     } else {
-        // el carrito está abierto
+        // El carrito está abierto, lo cerramos
         cartSection.style.height = "0px";
         cartSection.style.width = "0px";
         img.src = "Assets/Pics/Iconos/cart.webp";
+
+        // Esperamos que termine la animación (400ms o más si tu CSS lo define)
         setTimeout(() => {
-            if (
-                cartSection.querySelectorAll(".cart-product").length === 0 &&
-                parseFloat(getComputedStyle(cartSection).height) <= 0
-            ) {
+            // Revisamos el localStorage directamente
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const isCartEmpty = cart.length === 0;
+
+            // Si no hay productos, ocultamos el icono
+            if (isCartEmpty) {
                 cartElemnt.style.right = "-20%";
             }
-        }, 400);
+        }, 500);
     }
 }
+
+function handleCartSubmit() {}
 
 function mostrarProductos() {
     const mensajeVacio = document.getElementById("mensaje-vacio");
