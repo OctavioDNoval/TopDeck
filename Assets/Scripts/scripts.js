@@ -189,6 +189,24 @@ function mostrarProductos() {
                     btnAdd.innerHTML = "+";
                     btnAdd.classList.add("btn-input");
 
+                    btnRest.addEventListener("click", () => {
+                        const indexInCart = cart.findIndex((p) => p.name === item.name);
+                        if (indexInCart !== -1 && cart[indexInCart].quantity > 1) {
+                            cart[indexInCart].quantity -= 1;
+                            inputNum.value = cart[indexInCart].quantity;
+                            localStorage.setItem("cart", JSON.stringify(cart));
+                        }
+                    });
+
+                    btnAdd.addEventListener("click", () => {
+                        const indexInCart = cart.findIndex((p) => p.name === item.name);
+                        if (indexInCart !== -1) {
+                            cart[indexInCart].quantity += 1;
+                            inputNum.value = cart[indexInCart].quantity;
+                            localStorage.setItem("cart", JSON.stringify(cart));
+                        }
+                    });
+
                     numberDiv.appendChild(btnRest);
                     numberDiv.appendChild(inputNum);
                     numberDiv.appendChild(btnAdd);
@@ -200,7 +218,8 @@ function mostrarProductos() {
                     product.appendChild(numberDiv);
 
                     product.addEventListener("click", () => {
-                        numberDiv.style.display = numberDiv.style.display === "none" ? "flex" : "none";
+                        const currentDisplay = getComputedStyle(numberDiv).display;
+                        numberDiv.style.display = currentDisplay === "none" ? "flex" : "none";
                     });
 
                     cartSection.insertBefore(product, cartResume);
