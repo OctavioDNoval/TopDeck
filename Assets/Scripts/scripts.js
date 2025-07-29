@@ -1,5 +1,6 @@
 const cartElemnt = document.getElementById("cart");
 const cartSection = document.getElementById("carrito-section");
+const phoneNumber = "+5492236352642";
 
 function isEmptyArray(array) {
     return array.length === 0;
@@ -14,8 +15,15 @@ function actualizarBotonCarrito(cart) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    let cart = localStorage.getItem("cart") || [];
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
     actualizarBotonCarrito(cart);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const contact = document.getElementById("contact");
+    const msg = "Hola, vengo de la pagina web y te queria hacer una consulta";
+    const url = `https://wa.me/${phoneNumber.replace(/\D/g, "")}?text=${encodeURIComponent(msg)}`;
+    contact.href = url;
 });
 
 document.querySelectorAll(".add-product-btn").forEach((btn) => {
@@ -82,7 +90,25 @@ function abrirCarrito() {
     }
 }
 
-function handleCartSubmit() {}
+function handleCartSubmit() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (isEmptyArray(cart)) {
+        alert("No hay productos en el carrito.");
+        return;
+    }
+    // Mensaje más orientado a compra
+    let message = "Hola, estoy interesado en comprar los siguientes productos:\n\n";
+    cart.forEach((item, index) => {
+        message += `${index + 1}. ${item.name} x${item.quantity} - $${item.price * item.quantity}\n`;
+    });
+    const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    message += `\nTotal estimado: $${total}\n\n`;
+    message += "Envío este mensaje como una orden de compra.";
+    const url = `https://wa.me/${phoneNumber.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`;
+    // Redirige al usuario
+    window.open(url, "_blank");
+}
 
 function mostrarProductos() {
     const mensajeVacio = document.getElementById("mensaje-vacio");
@@ -101,6 +127,7 @@ function mostrarProductos() {
     sendBtn.type = "button";
     sendBtn.innerHTML = "Enviar";
     sendBtn.classList.add("cart-product-btn");
+    sendBtn.addEventListener("click", handleCartSubmit);
     cartResume.appendChild(sendBtn);
 
     cartSection.appendChild(cartTitle);
@@ -125,7 +152,7 @@ function mostrarProductos() {
                     name.classList.add("cart-product-name");
 
                     const price = document.createElement("p");
-                    price.innerHTML = `$ ${item.price}`;
+                    price.innerHTML = `$ ${item.price} x ${item.quantity}`;
                     price.classList.add("cart-product-price");
 
                     const deleteBtn = document.createElement("button");
