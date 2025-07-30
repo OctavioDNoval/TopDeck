@@ -26,36 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     contact.href = url;
 });
 
-document.querySelectorAll(".add-product-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-        const product = {
-            id: btn.dataset.id,
-            img: btn.dataset.img,
-            name: btn.dataset.name,
-            price: parseInt(btn.dataset.price),
-            quantity: 1,
-        };
-
-        //Agarramos el carrito del local storage y si es nulo
-        //hace un carrito (array) vacio
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-        const existing = cart.find((item) => item.id === product.id);
-        if (existing) {
-            existing.quantity += 1;
-        } else {
-            cart.push(product);
-        }
-
-        //Agarramos y guardamos en la key "cart" los datos del array
-        //cart que tenemos ya actualizados
-        localStorage.setItem("cart", JSON.stringify(cart));
-        actualizarBotonCarrito(cart);
-
-        console.log(cart);
-    });
-});
-
 function abrirCarrito() {
     const height = parseInt(getComputedStyle(cartSection).height);
     const img = document.getElementById("img-cart");
