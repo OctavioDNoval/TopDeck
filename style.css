@@ -66,6 +66,7 @@ p {
     box-shadow: 0 0 120px rgba(0, 0, 0, 0.4);
     transition: all 0.4s ease-in-out;
     overflow-x: hidden;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,6 +75,15 @@ p {
 
 #carrito-section::-webkit-scrollbar {
     display: none; /* Oculta scrollbar en navegadores WebKit */
+}
+
+.cart-items-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 30px;
+    position: relative;
 }
 
 /*PRODUCTOS DEL CARRITO*/
@@ -130,10 +140,8 @@ p {
 
 .cart-resume {
     width: 100%;
-    height: 50px;
+    min-height: 50px;
     background-color: #f0f4f8;
-    position: absolute;
-    bottom: 0;
 }
 
 .cart-product-btn {
