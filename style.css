@@ -308,6 +308,15 @@ p {
     font-size: 1.6rem;
 }
 
+.view-btn {
+    background-color: var(--secondary-color);
+    border: none;
+    color: white;
+    border-radius: 16px;
+    padding: 16px;
+    font-weight: bold;
+}
+
 @keyframes aparecer {
     0% {
         opacity: 0;
