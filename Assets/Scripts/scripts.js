@@ -1,5 +1,6 @@
 const cartElemnt = document.getElementById("cart");
 const cartSection = document.getElementById("carrito-section");
+const footer = document.getElementById("footer");
 const phoneNumber = "+5492236352642";
 
 function isEmptyArray(array) {
@@ -208,3 +209,22 @@ function mostrarProductos() {
         mensajeVacio.innerHTML = "No hay productos en el carrito";
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+                    cartElemnt.style.right = "-20%";
+                } else {
+                    cartElemnt.style.right = "5%";
+                }
+            });
+        },
+        {
+            threshold: 0,
+        }
+    );
+
+    observer.observe(footer);
+});
