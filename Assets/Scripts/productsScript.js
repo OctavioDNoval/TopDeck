@@ -78,31 +78,31 @@ const extra = [
         id: 1,
         name: "Random Bonsai",
         price: "21000",
-        img: "",
+        img: "Assets/pics/Productos/Extras/Bonsai.png",
     },
     {
         id: 2,
         name: "File Set",
         price: "18000",
-        img: "",
+        img: "Assets/pics/Productos/Extras/file_set.webp",
     },
     {
         id: 3,
         name: "Journey Together",
         price: "25000",
-        img: "",
+        img: "Assets/pics/Productos/Extras/journey_together.webp",
     },
     {
         id: 4,
         name: "cartuchera pokemon",
         price: "40000",
-        img: "",
+        img: "Assets/pics/Productos/Extras/cartuchera_pokemon.jpg",
     },
     {
         id: 5,
-        name: "Esferas nedeah",
+        name: "Esferas ",
         price: "25000",
-        img: "",
+        img: "Assets/pics/Productos/Extras/esferas.jpg",
     },
 ];
 function createProduct(productData) {
