@@ -99,6 +99,9 @@ function createProduct(productData) {
     btn.dataset.price = productData.price;
     btn.innerHTML = "+";
     btn.addEventListener("click", () => {
+        btn.classList.add("clicked");
+        setTimeout(() => btn.classList.remove("clicked"), 300);
+
         const product = {
             id: btn.dataset.id,
             img: btn.dataset.img,
