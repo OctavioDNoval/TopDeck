@@ -53,6 +53,10 @@ p {
     transition: all 0.4s ease;
 }
 
+#cart.visible {
+    right: 5%;
+}
+
 #carrito-section {
     position: fixed;
     height: 0;

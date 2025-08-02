@@ -9,9 +9,9 @@ function isEmptyArray(array) {
 
 function actualizarBotonCarrito(cart) {
     if (!isEmptyArray(cart)) {
-        cartElemnt.style.right = "5%";
+        cartElemnt.classList.add("visible");
     } else {
-        cartElemnt.style.right = "-20%";
+        cartElemnt.classList.remove("visible");
     }
 }
 
@@ -40,7 +40,7 @@ function abrirCarrito() {
         mostrarProductos();
 
         // Mostramos el icono del carrito por si estaba oculto
-        cartElemnt.style.right = "5%";
+        cartElemnt.classList.add("visible");
     } else {
         // El carrito está abierto, lo cerramos
         cartSection.style.height = "0px";
@@ -55,7 +55,7 @@ function abrirCarrito() {
 
             // Si no hay productos, ocultamos el icono
             if (isCartEmpty) {
-                cartElemnt.style.right = "-20%";
+                cartElemnt.classList.remove("visible");
             }
         }, 500);
     }
@@ -214,10 +214,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
-                    cartElemnt.style.right = "-20%";
+                if (entry.isIntersecting && entry.intersectionRatio >= 0) {
+                    cartElemnt.classList.remove("visible");
                 } else {
-                    cartElemnt.style.right = "5%";
+                    cartElemnt.classList.add("visible");
                 }
             });
         },
