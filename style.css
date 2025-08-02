@@ -84,6 +84,9 @@ p {
     gap: 20px;
     padding-bottom: 30px;
     position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
 }
 
 /*PRODUCTOS DEL CARRITO*/
