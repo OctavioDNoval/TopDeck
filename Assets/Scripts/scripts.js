@@ -214,10 +214,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
+                const cart = JSON.parse(localStorage.getItem("cart")) || [];
+                const isCartEmpty = cart.length === 0;
+
                 if (entry.isIntersecting && entry.intersectionRatio >= 0) {
+                    // Footer visible → ocultar el carrito
                     cartElemnt.classList.remove("visible");
                 } else {
-                    cartElemnt.classList.add("visible");
+                    // Footer no visible → mostrar solo si hay productos
+                    if (!isCartEmpty) {
+                        cartElemnt.classList.add("visible");
+                    } else {
+                        cartElemnt.classList.remove("visible");
+                    }
                 }
             });
         },

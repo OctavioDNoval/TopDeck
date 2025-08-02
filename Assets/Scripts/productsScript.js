@@ -105,7 +105,12 @@ const extra = [
         img: "Assets/pics/Productos/Extras/esferas.jpg",
     },
 ];
+
+// Funcion para crear un producto cualquiera ya sea un sobre o algunos de los "extra"
+
 function createProduct(productData) {
+    //creamos el contenedor donde va a estar el producto y
+    //le damos su clase
     const container = document.createElement("div");
     container.classList.add("product-container");
 
@@ -170,79 +175,90 @@ function createProduct(productData) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    const mediaQuery = window.matchMedia("(min-width: 760px)");
+
+    // Productos
     const productSection = document.getElementById("product-section");
-
-    for (let i = 0; i < 2; i++) {
-        const newProduct = createProduct(products[i]);
+    const renderProduct = (item) => {
+        const newProduct = createProduct(item);
         productSection.appendChild(newProduct);
+    };
+
+    if (mediaQuery.matches) {
+        products.forEach(renderProduct);
+    } else {
+        products.slice(0, 2).forEach(renderProduct);
+
+        const viewMore = document.createElement("button");
+        viewMore.innerHTML = "Ver más";
+        viewMore.classList.add("view-btn");
+
+        const viewLess = document.createElement("button");
+        viewLess.innerHTML = "Ver menos";
+        viewLess.classList.add("view-btn");
+        viewLess.style.display = "none";
+
+        viewMore.addEventListener("click", () => {
+            viewMore.style.display = "none";
+            viewLess.style.display = "inline-block";
+            products.slice(2).forEach((item) => {
+                const newProduct = createProduct(item);
+                newProduct.classList.add("extra");
+                productSection.insertBefore(newProduct, viewLess);
+            });
+        });
+
+        viewLess.addEventListener("click", () => {
+            document.querySelectorAll(".extra").forEach((e) => e.remove());
+            viewLess.style.display = "none";
+            viewMore.style.display = "inline-block";
+        });
+
+        productSection.appendChild(viewMore);
+        productSection.appendChild(viewLess);
     }
 
-    const viewMore = document.createElement("button");
-    viewMore.innerHTML = "Ver más";
-    viewMore.classList.add("view-btn");
-
-    const viewLess = document.createElement("button");
-    viewLess.innerHTML = "Ver menos";
-    viewLess.classList.add("view-btn");
-    viewLess.style.display = "none";
-
-    viewMore.addEventListener("click", () => {
-        viewMore.style.display = "none";
-        viewLess.style.display = "inline-block";
-        for (let i = 2; i < products.length; i++) {
-            const newProduct = createProduct(products[i]);
-            newProduct.classList.add("extra");
-            productSection.insertBefore(newProduct, viewLess);
-        }
-    });
-
-    viewLess.addEventListener("click", () => {
-        const extras = document.querySelectorAll(".extra");
-        extras.forEach((e) => e.remove());
-
-        viewLess.style.display = "none";
-        viewMore.style.display = "inline-block";
-    });
-
-    productSection.appendChild(viewMore);
-    productSection.appendChild(viewLess);
-});
-
-document.addEventListener("DOMContentLoaded", () => {
+    // Extras
     const extraSection = document.getElementById("extras-section");
-
-    for (let i = 0; i < 2; i++) {
-        const newExtra = createProduct(extra[i]);
+    const renderExtra = (item) => {
+        const newExtra = createProduct(item);
         extraSection.appendChild(newExtra);
-    }
+    };
 
-    const viewMore = document.createElement("button");
-    viewMore.innerHTML = "Ver más";
-    viewMore.classList.add("view-btn");
+    if (mediaQuery.matches) {
+        extra.forEach(renderExtra);
+    } else {
+        extra.slice(0, 2).forEach(renderExtra);
 
-    const viewLess = document.createElement("button");
-    viewLess.innerHTML = "Ver menos";
-    viewLess.classList.add("view-btn");
-    viewLess.style.display = "none";
+        const viewMore = document.createElement("button");
+        viewMore.innerHTML = "Ver más";
+        viewMore.classList.add("view-btn");
 
-    viewMore.addEventListener("click", () => {
-        viewMore.style.display = "none";
-        viewLess.style.display = "inline-block";
-        for (let i = 2; i < extra.length; i++) {
-            const newExtra = createProduct(extra[i]);
-            newExtra.classList.add("extraE");
-            extraSection.insertBefore(newExtra, viewLess);
-        }
-    });
-
-    viewLess.addEventListener("click", () => {
-        const extras = document.querySelectorAll(".extraE");
-        extras.forEach((e) => e.remove());
-
+        const viewLess = document.createElement("button");
+        viewLess.innerHTML = "Ver menos";
+        viewLess.classList.add("view-btn");
         viewLess.style.display = "none";
-        viewMore.style.display = "inline-block";
-    });
 
-    extraSection.appendChild(viewMore);
-    extraSection.appendChild(viewLess);
+        viewMore.addEventListener("click", () => {
+            viewMore.style.display = "none";
+            viewLess.style.display = "inline-block";
+            extra.slice(2).forEach((item) => {
+                const newExtra = createProduct(item);
+                newExtra.classList.add("extraE");
+                extraSection.insertBefore(newExtra, viewLess);
+            });
+        });
+
+        viewLess.addEventListener("click", () => {
+            document.querySelectorAll(".extraE").forEach((e) => e.remove());
+            viewLess.style.display = "none";
+            viewMore.style.display = "inline-block";
+        });
+
+        extraSection.appendChild(viewMore);
+        extraSection.appendChild(viewLess);
+    }
+    mediaQuery.addEventListener("change", (e) => {
+        location.reload(); // Reload si cambia de mobile a desktop o viceversa
+    });
 });

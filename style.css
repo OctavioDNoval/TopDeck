@@ -271,9 +271,10 @@ p {
     align-items: center;
 }
 
-.product-section h2 {
+main h2 {
     margin: 50px 0px;
     font-size: 2.4rem;
+    text-align: center;
 }
 
 .product-container {
@@ -397,6 +398,41 @@ p {
     text-decoration: none;
     color: white;
     font-weight: bolder;
+}
+
+@media screen and (min-width: 760px) {
+    .header {
+        flex-direction: row;
+        height: 50vh;
+        justify-content: space-evenly;
+    }
+    .black-gradient {
+        height: 50vh;
+    }
+    .contact-img-container {
+        width: auto;
+        padding-right: 100px;
+    }
+    .contact-img {
+        width: auto;
+    }
+    .title-container {
+        margin-top: 5vh;
+    }
+    .title {
+        font-size: 5.6rem;
+    }
+    .subtitle {
+        font-size: 2.4rem;
+    }
+    .product-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .product-container {
+        flex: 1 1 calc(33.3% - 1rem);
+    }
 }
 
 /*--------------------KEYFRAMES----------------------*/
