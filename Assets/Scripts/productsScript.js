@@ -73,6 +73,38 @@ const products = [
     },
 ];
 
+const extra = [
+    {
+        id: 1,
+        name: "Random Bonsai",
+        price: "21000",
+        img: "",
+    },
+    {
+        id: 2,
+        name: "File Set",
+        price: "18000",
+        img: "",
+    },
+    {
+        id: 3,
+        name: "Journey Together",
+        price: "25000",
+        img: "",
+    },
+    {
+        id: 4,
+        name: "cartuchera pokemon",
+        price: "40000",
+        img: "",
+    },
+    {
+        id: 5,
+        name: "Esferas nedeah",
+        price: "25000",
+        img: "",
+    },
+];
 function createProduct(productData) {
     const container = document.createElement("div");
     container.classList.add("product-container");
@@ -174,4 +206,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
     productSection.appendChild(viewMore);
     productSection.appendChild(viewLess);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const extraSection = document.getElementById("extras-section");
+
+    for (let i = 0; i < 2; i++) {
+        const newExtra = createProduct(extra[i]);
+        extraSection.appendChild(newExtra);
+    }
+
+    const viewMore = document.createElement("button");
+    viewMore.innerHTML = "Ver más";
+    viewMore.classList.add("view-btn");
+
+    const viewLess = document.createElement("button");
+    viewLess.innerHTML = "Ver menos";
+    viewLess.classList.add("view-btn");
+    viewLess.style.display = "none";
+
+    viewMore.addEventListener("click", () => {
+        viewMore.style.display = "none";
+        viewLess.style.display = "inline-block";
+        for (let i = 2; i < extra.length; i++) {
+            const newExtra = createProduct(extra[i]);
+            newExtra.classList.add("extraE");
+            extraSection.insertBefore(newExtra, viewLess);
+        }
+    });
+
+    viewLess.addEventListener("click", () => {
+        const extras = document.querySelectorAll(".extraE");
+        extras.forEach((e) => e.remove());
+
+        viewLess.style.display = "none";
+        viewMore.style.display = "inline-block";
+    });
+
+    extraSection.appendChild(viewMore);
+    extraSection.appendChild(viewLess);
 });
