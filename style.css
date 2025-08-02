@@ -90,7 +90,7 @@ p {
 
 .cart-product {
     display: flex;
-    width: 90%;
+    max-width: 85%;
     max-height: 20%;
     padding: 0px 8px 0px 4px;
     background-color: #f0f4f8;
