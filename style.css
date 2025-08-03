@@ -407,6 +407,9 @@ main h2 {
         height: 50vh;
         justify-content: space-evenly;
     }
+    #carrito-section {
+        width: 35% !important;
+    }
     .black-gradient {
         height: 50vh;
     }

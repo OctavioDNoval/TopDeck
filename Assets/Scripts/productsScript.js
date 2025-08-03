@@ -77,19 +77,19 @@ const extra = [
     {
         id: 1,
         name: "Random Bonsai",
-        price: "21000",
+        price: "18000",
         img: "Assets/pics/Productos/Extras/Bonsai.webp",
     },
     {
         id: 2,
         name: "File Set",
-        price: "18000",
+        price: "95000",
         img: "Assets/pics/Productos/Extras/file_set.webp",
     },
     {
         id: 3,
-        name: "Journey Together",
-        price: "25000",
+        name: "Journey Together ETB",
+        price: "140000",
         img: "Assets/pics/Productos/Extras/journey_together.webp",
     },
     {
@@ -101,7 +101,7 @@ const extra = [
     {
         id: 5,
         name: "Esferas ",
-        price: "25000",
+        price: "22000",
         img: "Assets/pics/Productos/Extras/esferas.webp",
     },
 ];
