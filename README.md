@@ -72,7 +72,7 @@ const productos = [
 
 El repositorio tiene una estructura que hay que respetar, sobre todo donde van las imagenes, la imagen la guardamos segun el producto que querramos guardar, sea sobre o algun extra, la direccion donde guardemos la imagen es la misma que ponemos en la propiedad _img_ del objeto
 
-![Img estructura](Assets/Pics/Imagen-estructura.png)
+![Img estructura](Assets/Pics/imagen-estructura.png)
 
 1. Si estamos guardando un **SOBRE** la direccion es en **_Assets/Pics/Productos/Sobres/_**
 2. Si estamos guardando un **EXTRA** la direccion es en **_Assets/Pics/Productos/Extras/_**
