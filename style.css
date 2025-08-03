@@ -206,7 +206,7 @@ p {
 
 /*-----------Primer pagina o header----------------*/
 .header {
-    background-image: url(Assets/Pics/Background.png);
+    background-image: url(Assets/Pics/Background.webp);
 
     height: 100vh;
     width: 100%;
