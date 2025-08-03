@@ -9,19 +9,19 @@ const products = [
         id: 2,
         name: "Black Bolt Booster Pack",
         price: "10000",
-        img: "Assets/Pics/Productos/Sobres/black-bolt-booster.png",
+        img: "Assets/Pics/Productos/Sobres/black-bolt-booster.webp",
     },
     {
         id: 3,
         name: "Heat Weave Booster Pack",
         price: "9000",
-        img: "Assets/Pics/Productos/Sobres/heat weave.png",
+        img: "Assets/Pics/Productos/Sobres/heat weave.webp",
     },
     {
         id: 4,
         name: "Night Wanderer Booster Pack",
         price: "7000",
-        img: "Assets/Pics/Productos/Sobres/night wanderer booster pack.png",
+        img: "Assets/Pics/Productos/Sobres/night wanderer booster pack.webp",
     },
     {
         id: 5,
@@ -33,13 +33,13 @@ const products = [
         id: 6,
         name: "Raging Surf",
         price: "7000",
-        img: "Assets/Pics/Productos/Sobres/raging surf booster pack.png",
+        img: "Assets/Pics/Productos/Sobres/raging surf booster pack.webp",
     },
     {
         id: 7,
         name: "Team Rocket",
         price: "10000",
-        img: "Assets/Pics/Productos/Sobres/Rocket_Booster_Pack.jpg",
+        img: "Assets/Pics/Productos/Sobres/Rocket_Booster_Pack.webp",
     },
     {
         id: 8,
@@ -69,7 +69,7 @@ const products = [
         id: 12,
         name: "White Flare",
         price: "10000",
-        img: "Assets/Pics/Productos/Sobres/White_Flare_Booster_Pack.png",
+        img: "Assets/Pics/Productos/Sobres/White_Flare_Booster_Pack.webp",
     },
 ];
 
@@ -78,7 +78,7 @@ const extra = [
         id: 1,
         name: "Random Bonsai",
         price: "21000",
-        img: "Assets/pics/Productos/Extras/Bonsai.png",
+        img: "Assets/pics/Productos/Extras/Bonsai.webp",
     },
     {
         id: 2,
@@ -96,13 +96,13 @@ const extra = [
         id: 4,
         name: "cartuchera pokemon",
         price: "40000",
-        img: "Assets/pics/Productos/Extras/cartuchera_pokemon.jpg",
+        img: "Assets/pics/Productos/Extras/cartuchera_pokemon.webp",
     },
     {
         id: 5,
         name: "Esferas ",
         price: "25000",
-        img: "Assets/pics/Productos/Extras/esferas.jpg",
+        img: "Assets/pics/Productos/Extras/esferas.webp",
     },
 ];
 
