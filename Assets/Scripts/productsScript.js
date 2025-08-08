@@ -86,12 +86,12 @@ const extra = [
         price: "95000",
         img: "Assets/pics/Productos/Extras/file_set.webp",
     },
-    {
+   /* {
         id: 3,
         name: "Journey Together ETB",
         price: "140000",
         img: "Assets/pics/Productos/Extras/journey_together.webp",
-    },
+    },*/
     {
         id: 4,
         name: "cartuchera pokemon",
