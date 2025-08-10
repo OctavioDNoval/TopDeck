@@ -1,9 +1,9 @@
 const products = [
     {
-        id: 1,
-        name: "Journey Together JPN Booster",
-        price: "7000",
-        img: "Assets/Pics/Productos/Sobres/battle partners.webp",
+        id: 5,
+        name: "151 JPN Booster",
+        price: "22000",
+        img: "Assets/Pics/Productos/Sobres/Pokemon-151-Booster-Pack.webp",
     },
     {
         id: 2,
@@ -11,6 +11,25 @@ const products = [
         price: "10000",
         img: "Assets/Pics/Productos/Sobres/black-bolt-booster.webp",
     },
+    /*{
+        id: 12,
+        name: "White Flare JPN Booster",
+        price: "10000",
+        img: "Assets/Pics/Productos/Sobres/White_Flare_Booster_Pack.webp",
+    },*/
+{
+        id: 7,
+        name: "Glorey of the Team Rocket JPN Booster",
+        price: "10000",
+        img: "Assets/Pics/Productos/Sobres/Rocket_Booster_Pack.webp",
+    },
+    {
+        id: 1,
+        name: "Journey Together JPN Booster",
+        price: "7000",
+        img: "Assets/Pics/Productos/Sobres/battle partners.webp",
+    },
+    
     {
         id: 3,
         name: "Heat Weave Arena JPN Booster",
@@ -23,24 +42,14 @@ const products = [
         price: "7000",
         img: "Assets/Pics/Productos/Sobres/night wanderer booster pack.webp",
     },
-    {
-        id: 5,
-        name: "151 JPN Booster",
-        price: "22000",
-        img: "Assets/Pics/Productos/Sobres/Pokemon-151-Booster-Pack.webp",
-    },
+    
     {
         id: 6,
         name: "Raging Surf JPN Booster",
         price: "7000",
         img: "Assets/Pics/Productos/Sobres/raging surf booster pack.webp",
     },
-    {
-        id: 7,
-        name: "Glorey of the Team Rocket JPN Booster",
-        price: "10000",
-        img: "Assets/Pics/Productos/Sobres/Rocket_Booster_Pack.webp",
-    },
+    
     {
         id: 8,
         name: "Black Flame JPN Booster",
@@ -65,12 +74,7 @@ const products = [
         price: "25000",
         img: "Assets/Pics/Productos/Sobres/Vstar_Booster_Pack.webp",
     },
-    {
-        id: 12,
-        name: "White Flare JPN Booster",
-        price: "10000",
-        img: "Assets/Pics/Productos/Sobres/White_Flare_Booster_Pack.webp",
-    },
+    
 ];
 
 const extra = [
