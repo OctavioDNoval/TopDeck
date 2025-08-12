@@ -19,7 +19,7 @@ const products = [
     },*/
 {
         id: 7,
-        name: "Glorey of the Team Rocket JPN Booster",
+        name: "Glory of the Team Rocket JPN Booster",
         price: "10000",
         img: "Assets/Pics/Productos/Sobres/Rocket_Booster_Pack.webp",
     },
@@ -64,7 +64,7 @@ const products = [
     },
     {
         id: 9,
-        name: "Shining Treasures JPN Booster",
+        name: "Shiny Treasure JPN Booster",
         price: "20000",
         img: "Assets/Pics/Productos/Sobres/Shining Treasures.webp",
     },
