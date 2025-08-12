@@ -57,16 +57,16 @@ const products = [
         img: "Assets/Pics/Productos/Sobres/Ruler-of-the-black-flame-booster-pack.webp",
     },
     {
-        id: 9,
-        name: "Shining Treasures JPN Booster",
-        price: "20000",
-        img: "Assets/Pics/Productos/Sobres/Shining Treasures.webp",
-    },
-    {
         id: 10,
         name: "Surging Sparks JPN Booster",
         price: "9000",
         img: "Assets/Pics/Productos/Sobres/Super_Electric_Booster_Pack.webp",
+    },
+    {
+        id: 9,
+        name: "Shining Treasures JPN Booster",
+        price: "20000",
+        img: "Assets/Pics/Productos/Sobres/Shining Treasures.webp",
     },
     {
         id: 11,
