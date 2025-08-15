@@ -78,7 +78,7 @@ const products = [
         id:13,
         name:"Snow Hazard JPN Booster",
         price:"6000",
-        img:"Assets/Pics/Productos/Sobres/snow-hazard-booster-webp",
+        img:"Assets/Pics/Productos/Sobres/snow-hazard-booster.webp",
     },
 ];
 
