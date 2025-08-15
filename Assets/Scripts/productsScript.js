@@ -17,7 +17,7 @@ const products = [
         price: "10000",
         img: "Assets/Pics/Productos/Sobres/White_Flare_Booster_Pack.webp",
     },*/
-{
+    {
         id: 7,
         name: "Glory of the Team Rocket JPN Booster",
         price: "10000",
@@ -29,7 +29,7 @@ const products = [
         price: "7000",
         img: "Assets/Pics/Productos/Sobres/battle partners.webp",
     },
-    
+
     {
         id: 3,
         name: "Heat Weave Arena JPN Booster",
@@ -42,14 +42,14 @@ const products = [
         price: "7000",
         img: "Assets/Pics/Productos/Sobres/night wanderer booster pack.webp",
     },
-    
+
     {
         id: 6,
         name: "Raging Surf JPN Booster",
         price: "7000",
         img: "Assets/Pics/Productos/Sobres/raging surf booster pack.webp",
     },
-    
+
     {
         id: 8,
         name: "Black Flame JPN Booster",
@@ -74,7 +74,6 @@ const products = [
         price: "25000",
         img: "Assets/Pics/Productos/Sobres/Vstar_Booster_Pack.webp",
     },
-    
 ];
 
 const extra = [
@@ -90,7 +89,7 @@ const extra = [
         price: "95000",
         img: "Assets/pics/Productos/Extras/file_set.webp",
     },
-   /* {
+    /* {
         id: 3,
         name: "Journey Together ETB",
         price: "140000",
@@ -110,6 +109,7 @@ const extra = [
     },
 ];
 
+const mediaQuery = window.matchMedia("(min-width: 760px)");
 // Funcion para crear un producto cualquiera ya sea un sobre o algunos de los "extra"
 
 function createProduct(productData) {
@@ -178,9 +178,50 @@ function createProduct(productData) {
     return container;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const mediaQuery = window.matchMedia("(min-width: 760px)");
+function createViewMoreButton(dataArray, section, startIndex, extraClass) {
+    const viewMore = document.createElement("button");
+    viewMore.innerHTML = "Ver más";
+    viewMore.classList.add("view-btn");
 
+    viewMore.addEventListener("click", () => {
+        viewMore.style.display = "none";
+
+        // Mostrar el botón "Ver menos"
+        const viewLess = section.querySelector(".view-less-btn");
+        viewLess.style.display = "inline-block";
+
+        // Agregar los elementos extra
+        dataArray.slice(startIndex).forEach((item) => {
+            const newItem = createProduct(item);
+            newItem.classList.add(extraClass);
+            section.insertBefore(newItem, viewLess);
+        });
+    });
+
+    return viewMore;
+}
+
+function createViewLessButton(section, extraClass) {
+    const viewLess = document.createElement("button");
+    viewLess.innerHTML = "Ver menos";
+    viewLess.classList.add("view-btn", "view-less-btn");
+    viewLess.style.display = "none";
+
+    viewLess.addEventListener("click", () => {
+        // Eliminar los elementos extra
+        section.querySelectorAll(`.${extraClass}`).forEach((e) => e.remove());
+
+        viewLess.style.display = "none";
+
+        // Volver a mostrar el botón "Ver más"
+        const viewMore = section.querySelector(".view-btn:not(.view-less-btn)");
+        viewMore.style.display = "inline-block";
+    });
+
+    return viewLess;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
     // Productos
     const productSection = document.getElementById("product-section");
     const renderProduct = (item) => {
@@ -193,30 +234,8 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         products.slice(0, 2).forEach(renderProduct);
 
-        const viewMore = document.createElement("button");
-        viewMore.innerHTML = "Ver más";
-        viewMore.classList.add("view-btn");
-
-        const viewLess = document.createElement("button");
-        viewLess.innerHTML = "Ver menos";
-        viewLess.classList.add("view-btn");
-        viewLess.style.display = "none";
-
-        viewMore.addEventListener("click", () => {
-            viewMore.style.display = "none";
-            viewLess.style.display = "inline-block";
-            products.slice(2).forEach((item) => {
-                const newProduct = createProduct(item);
-                newProduct.classList.add("extra");
-                productSection.insertBefore(newProduct, viewLess);
-            });
-        });
-
-        viewLess.addEventListener("click", () => {
-            document.querySelectorAll(".extra").forEach((e) => e.remove());
-            viewLess.style.display = "none";
-            viewMore.style.display = "inline-block";
-        });
+        viewMore = createViewMoreButton(products, productSection, 2, "extra");
+        viewLess = createViewLessButton(productSection, "extra");
 
         productSection.appendChild(viewMore);
         productSection.appendChild(viewLess);
@@ -234,30 +253,8 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         extra.slice(0, 2).forEach(renderExtra);
 
-        const viewMore = document.createElement("button");
-        viewMore.innerHTML = "Ver más";
-        viewMore.classList.add("view-btn");
-
-        const viewLess = document.createElement("button");
-        viewLess.innerHTML = "Ver menos";
-        viewLess.classList.add("view-btn");
-        viewLess.style.display = "none";
-
-        viewMore.addEventListener("click", () => {
-            viewMore.style.display = "none";
-            viewLess.style.display = "inline-block";
-            extra.slice(2).forEach((item) => {
-                const newExtra = createProduct(item);
-                newExtra.classList.add("extraE");
-                extraSection.insertBefore(newExtra, viewLess);
-            });
-        });
-
-        viewLess.addEventListener("click", () => {
-            document.querySelectorAll(".extraE").forEach((e) => e.remove());
-            viewLess.style.display = "none";
-            viewMore.style.display = "inline-block";
-        });
+        viewMore = createViewMoreButton(extra, extraSection, 2, "extraE");
+        viewLess = createViewLessButton(extraSection, "extraE");
 
         extraSection.appendChild(viewMore);
         extraSection.appendChild(viewLess);
@@ -266,3 +263,91 @@ document.addEventListener("DOMContentLoaded", () => {
         location.reload(); // Reload si cambia de mobile a desktop o viceversa
     });
 });
+
+const sortProducts = document.getElementById("sort-products");
+sortProducts.addEventListener("change", (e) => {
+    sortAndRenderProducts(e.target.value);
+});
+
+const sortExtra = document.getElementById("sort-extra");
+sortExtra.addEventListener("cahnge", (e) => {
+    sortAndRenderExtras(e.target.value);
+});
+
+function sortAndRenderProducts(option) {
+    let sortedProducts = [...products];
+    const productSection = document.getElementById("product-section");
+
+    switch (option) {
+        case "Precio-mayor":
+            sortedProducts.sort((a, b) => b.price - a.price);
+            break;
+        case "Precio-menor":
+            sortedProducts.sort((a, b) => a.price - b.price);
+            break;
+        case "nombre":
+            sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
+            break;
+        case "relevancia":
+        default:
+            sortedProducts = [...products];
+            break;
+    }
+
+    const renderProduct = (item) => {
+        const newProduct = createProduct(item);
+        productSection.appendChild(newProduct);
+    };
+
+    productSection.innerHTML = "";
+    if (mediaQuery.matches) {
+        sortedProducts.forEach(renderProduct);
+    } else {
+        sortedProducts.slice(0, 2).forEach(renderProduct);
+
+        viewMore = createViewMoreButton(sortedProducts, productSection, 2, "extra");
+        viewLess = createViewLessButton(productSection, "extra");
+
+        productSection.appendChild(viewMore);
+        productSection.appendChild(viewLess);
+    }
+}
+
+function sortAndRenderExtras(option) {
+    let sortedExtras = [...extra];
+    const extraSection = document.getElementById("extras-section");
+
+    switch (option) {
+        case "Precio-mayor":
+            sortedExtras.sort((a, b) => b.price - a.price);
+            break;
+        case "Precio-menor":
+            sortedExtras.sort((a, b) => a.price - b.price);
+            break;
+        case "nombre":
+            sortedExtras.sort((a, b) => a.name.localeCompare(b.name));
+            break;
+        case "relevancia":
+        default:
+            sortedExtras = [...products];
+            break;
+    }
+
+    const renderExtra = (item) => {
+        const newExtra = createProduct(item);
+        extraSection.appendChild(newExtra);
+    };
+
+    extraSection.innerHTML = "";
+    if (mediaQuery.matches) {
+        sortedExtras.forEach(renderExtra);
+    } else {
+        sortedExtras.slice(0, 2).forEach(renderExtra);
+
+        viewMore = createViewMoreButton(sortedExtras, extraSection, 2, "extraE");
+        viewLess = createViewLessButton(extraSection, "extraE");
+
+        extraSection.appendChild(viewMore);
+        extraSection.appendChild(viewLess);
+    }
+}
