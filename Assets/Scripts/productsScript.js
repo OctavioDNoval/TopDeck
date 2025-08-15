@@ -74,6 +74,12 @@ const products = [
         price: "25000",
         img: "Assets/Pics/Productos/Sobres/Vstar_Booster_Pack.webp",
     },
+    {
+        id:13,
+        name:"Snow Hazard JPN Booster",
+        price:"6000",
+        img:"Assets/Pics/Productos/Sobres/snow-hazard-booster-webp",
+    },
 ];
 
 const extra = [
