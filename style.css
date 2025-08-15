@@ -453,9 +453,12 @@ main h2 {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 1rem;
+        padding: 0 12%;
+        align-items: center;
     }
     .product-container {
         flex: 1 1 calc(33.3% - 1rem);
+        max-width: 33.3%;
     }
 }
 
