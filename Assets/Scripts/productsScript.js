@@ -276,7 +276,7 @@ sortProducts.addEventListener("change", (e) => {
 });
 
 const sortExtra = document.getElementById("sort-extra");
-sortExtra.addEventListener("cahnge", (e) => {
+sortExtra.addEventListener("change", (e) => {
     sortAndRenderExtras(e.target.value);
 });
 
