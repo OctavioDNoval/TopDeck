@@ -40,7 +40,7 @@ const products = [
         id: 4,
         name: "Night Wanderer (JP) - Booster",
         price: "7000",
-        img: "Assets/Pics/Productos/Sobres/night wanderer booster pack.webp",
+        img: "Assets/Pics/Productos/Sobres/NIGHTWANDERER_FOTO.webp",
     },
 
     {
