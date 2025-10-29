@@ -25,31 +25,31 @@ const products = [
     },
     {
         id: 7,
-        name: "Glory of the Team Rocket (JP) - Booster",
+        name: "Pokémon - Glory of the Team Rocket (JP) - Booster Pack",
         price: "12000",
-        img: "Assets/Pics/Productos/Sobres/Rocket_Booster_Pack.webp",
+        img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
     },
     {
         id: 1,
-        name: "Journey Together (JP) - Booster",
-        price: "7000",
-        img: "Assets/Pics/Productos/Sobres/battle partners.webp",
+        name: "Pokémon - Terastal Festival (JP) - Booster Pack",
+        price: "30000",
+        img: "Assets/Pics/Productos/Sobres/TERASTALFESTIVAL_FOTO.webp",
     },
 
     {
         id: 3,
-        name: "Heat Weave Arena (JP) - Booster",
-        price: "9000",
-        img: "Assets/Pics/Productos/Sobres/heat weave.webp",
+        name: "Pokémon - Pokémon GO (JP) - Booster Pack",
+        price: "14000",
+        img: "Assets/Pics/Productos/Sobres/POKEGO_FOTO.webp",
     },
     {
         id: 4,
-        name: "Night Wanderer (JP) - Booster",
+        name: "Pokémon - Night Wanderer (JP) - Booster Pack",
         price: "7000",
         img: "Assets/Pics/Productos/Sobres/NIGHTWANDERER_FOTO.webp",
     },
 
-    {
+    /*{
         id: 6,
         name: "Raging Surf (JP) - Booster",
         price: "7000",
@@ -79,29 +79,29 @@ const products = [
         name:"Snow Hazard (JP) - Booster",
         price:"6000",
         img:"Assets/Pics/Productos/Sobres/snow-hazard-booster.webp",
-    },
+    },*/
 ];
 
 const extra = [
     {
         id: 1,
-        name: "Figura Pokémon - Sylveon - Moncolle / Takara Tomy Original",
+        name: "Figura Pokémon - Sylveon - Moncolle / Takara Tomy",
         price: "24999",
         img: "Assets/pics/Productos/Extras/SYLVEON_MONCOLLE_FOTO.webp",
     },
     {
         id: 2,
-        name: "Figura Pokémon - Terrarium Vol. 15 - Re-Ment (x1 Fig. Aleatoria)",
+        name: "Figura Pokémon - Terrarium Collection Vol. 15 - Re-Ment (x1 Fig. Aleatoria)",
         price: "40000",
         img: "Assets/pics/Productos/Sobres/TERRARIUM15_FOTO.webp",
     },
     {
         id: 3,
-        name: "Figura Pokémon - Terrarium Vol. 13 - Re-Ment (x1 Fig. Aleatoria)",
+        name: "Figura Pokémon - Terrarium Collection Vol. 13 - Re-Ment (x1 Fig. Aleatoria)",
         price: "30000",
         img: "Assets/pics/Productos/Sobres/TERRARIUM13_FOTO.webp",
     },
-    {
+    /*{
         id: 4,
         name: "Cartuchera Pikachu",
         price: "40000",
@@ -112,7 +112,7 @@ const extra = [
         name: "Terrarium Collection x1 ",
         price: "22000",
         img: "Assets/pics/Productos/Extras/esferas.webp",
-    },
+    },*/
 ];
 
 const mediaQuery = window.matchMedia("(min-width: 760px)");
