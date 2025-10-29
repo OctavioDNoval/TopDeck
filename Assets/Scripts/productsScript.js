@@ -93,13 +93,13 @@ const extra = [
         id: 2,
         name: "Figura Pokémon - Terrarium Vol. 15 - Re-Ment (x1 Fig. Aleatoria)",
         price: "40000",
-        img: "Assets/pics/Productos/Extras/TERRARIUM15_FOTO.webp",
+        img: "Assets/pics/Productos/Sobres/TERRARIUM15_FOTO.webp",
     },
     {
         id: 3,
         name: "Figura Pokémon - Terrarium Vol. 13 - Re-Ment (x1 Fig. Aleatoria)",
         price: "30000",
-        img: "Assets/pics/Productos/Extras/TERRARIUM13_FOTO.webp",
+        img: "Assets/pics/Productos/Sobres/TERRARIUM13_FOTO.webp",
     },
     {
         id: 4,
