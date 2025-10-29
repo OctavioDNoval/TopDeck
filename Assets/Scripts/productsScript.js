@@ -1,7 +1,13 @@
 const products = [
     {
+        id: 11,
+        name: "VSTAR Universe (JP) - Booster Pack",
+        price: "36000",
+        img: "Assets/Pics/Productos/Sobres/VSTARUNIVERSE_FOTO.png",
+    },
+    {
         id: 5,
-        name: "151 (JP) - Booster",
+        name: "151 (JP) - Booster Pack",
         price: "26000",
         img: "Assets/Pics/Productos/Sobres/Pokemon-151-Booster-Pack.webp",
     },
@@ -67,12 +73,6 @@ const products = [
         name: "Shiny Treasure (JP) - Booster",
         price: "20000",
         img: "Assets/Pics/Productos/Sobres/Shining Treasures.webp",
-    },
-    {
-        id: 11,
-        name: "VSTAR Universe (JP) - Booster",
-        price: "36000",
-        img: "Assets/Pics/Productos/Sobres/VSTARUNIVERSE_FOTO.png",
     },
     {
         id:13,
