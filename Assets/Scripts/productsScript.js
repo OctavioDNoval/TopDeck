@@ -72,7 +72,7 @@ const products = [
         id: 11,
         name: "Vstar Universe JPN Booster",
         price: "25000",
-        img: "Assets/Pics/Productos/Sobres/Vstar_Booster_Pack.webp",
+        img: "Assets/Pics/Productos/Sobres/VSTARUNIVERSE_FOTO.png",
     },
     {
         id:13,
