@@ -314,6 +314,7 @@ main h2 {
 
 .product-img {
     height: 65%;
+    margin: 12px;
 }
 
 .product-name {
