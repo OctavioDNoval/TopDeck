@@ -91,16 +91,16 @@ const extra = [
     },
     {
         id: 2,
-        name: "Victiny File Set Promo",
-        price: "95000",
+        name: "Figura Pokémon - Terrarium Vol. 15 - Re-Ment (x1 Fig. Aleatoria)",
+        price: "40000",
         img: "Assets/pics/Productos/Extras/file_set.webp",
     },
-    /* {
+    {
         id: 3,
-        name: "Journey Together ETB",
-        price: "140000",
+        name: "Figura Pokémon - Terrarium Vol. 13 - Re-Ment (x1 Fig. Aleatoria)",
+        price: "30000",
         img: "Assets/pics/Productos/Extras/journey_together.webp",
-    },*/
+    },
     {
         id: 4,
         name: "Cartuchera Pikachu",
