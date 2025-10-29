@@ -13,13 +13,13 @@ const products = [
     },*/
     {
         id: 2,
-        name: "DBS Fusion World - Ultra Limit FB04 (JP) Booster Pack",
+        name: "DBS Fusion World - Ultra Limit (JP) Booster Pack",
         price: "7000",
         img: "Assets/Pics/Productos/Sobres/DB_FB04_FOTO.webp",
     },
     {
         id: 12,
-        name: "One Piece - 25th Anime Collection EB02 (JP) Booster Pack",
+        name: "One Piece - Anime 25th Collection (JP) Booster Pack",
         price: "9000",
         img: "Assets/Pics/Productos/Sobres/OP_25TH_FOTO.webp",
     },
@@ -85,9 +85,9 @@ const products = [
 const extra = [
     {
         id: 1,
-        name: "Bonsai Collection x1",
-        price: "18000",
-        img: "Assets/pics/Productos/Extras/Bonsai.webp",
+        name: "Figura Pokémon - Sylveon - Moncolle / Takara Tomy Original",
+        price: "24999",
+        img: "Assets/pics/Productos/Extras/SYLVEON_MONCOLLE_FOTO.webp",
     },
     {
         id: 2,
