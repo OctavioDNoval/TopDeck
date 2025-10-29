@@ -15,13 +15,13 @@ const products = [
         id: 2,
         name: "DBS Fusion World - Ultra Limit FB04 (JP) Booster Pack",
         price: "7000",
-        img: "Assets/Pics/Productos/Sobres/black-bolt-booster.webp",
+        img: "Assets/Pics/Productos/Sobres/DB_FB04_FOTO.webp",
     },
     {
         id: 12,
         name: "One Piece - 25th Anime Collection EB02 (JP) Booster Pack",
         price: "9000",
-        img: "Assets/Pics/Productos/Sobres/White_Flare_Booster_Pack.webp",
+        img: "Assets/Pics/Productos/Sobres/OP_25TH_FOTO.webp",
     },
     {
         id: 7,
