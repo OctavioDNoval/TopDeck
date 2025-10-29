@@ -1,26 +1,26 @@
 const products = [
     {
         id: 11,
-        name: "VSTAR Universe (JP) - Booster Pack",
+        name: "Pokémon - VSTAR Universe (JP) Booster Pack",
         price: "36000",
         img: "Assets/Pics/Productos/Sobres/VSTARUNIVERSE_FOTO.png",
     },
-    {
+    /*{
         id: 5,
         name: "151 (JP) - Booster Pack",
         price: "26000",
         img: "Assets/Pics/Productos/Sobres/Pokemon-151-Booster-Pack.webp",
-    },
+    },*/
     {
         id: 2,
-        name: "Black Bolt (JP) - Booster",
-        price: "12000",
+        name: "DBS Fusion World - Ultra Limit FB04 (JP) Booster Pack",
+        price: "7000",
         img: "Assets/Pics/Productos/Sobres/black-bolt-booster.webp",
     },
     {
         id: 12,
-        name: "White Flare (JP) - Booster",
-        price: "10000",
+        name: "One Piece - 25th Anime Collection EB02 (JP) Booster Pack",
+        price: "9000",
         img: "Assets/Pics/Productos/Sobres/White_Flare_Booster_Pack.webp",
     },
     {
