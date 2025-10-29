@@ -1,82 +1,82 @@
 const products = [
     {
         id: 5,
-        name: "151 JPN Booster",
-        price: "22000",
+        name: "151 (JP) - Booster",
+        price: "26000",
         img: "Assets/Pics/Productos/Sobres/Pokemon-151-Booster-Pack.webp",
     },
     {
         id: 2,
-        name: "Black Bolt JPN Booster",
-        price: "10000",
+        name: "Black Bolt (JP) - Booster",
+        price: "12000",
         img: "Assets/Pics/Productos/Sobres/black-bolt-booster.webp",
     },
-    /*{
+    {
         id: 12,
-        name: "White Flare JPN Booster",
+        name: "White Flare (JP) - Booster",
         price: "10000",
         img: "Assets/Pics/Productos/Sobres/White_Flare_Booster_Pack.webp",
-    },*/
+    },
     {
         id: 7,
-        name: "Glory of the Team Rocket JPN Booster",
-        price: "10000",
+        name: "Glory of the Team Rocket (JP) - Booster",
+        price: "12000",
         img: "Assets/Pics/Productos/Sobres/Rocket_Booster_Pack.webp",
     },
     {
         id: 1,
-        name: "Journey Together JPN Booster",
+        name: "Journey Together (JP) - Booster",
         price: "7000",
         img: "Assets/Pics/Productos/Sobres/battle partners.webp",
     },
 
     {
         id: 3,
-        name: "Heat Weave Arena JPN Booster",
+        name: "Heat Weave Arena (JP) - Booster",
         price: "9000",
         img: "Assets/Pics/Productos/Sobres/heat weave.webp",
     },
     {
         id: 4,
-        name: "Night Wanderer JPN Booster",
+        name: "Night Wanderer (JP) - Booster",
         price: "7000",
         img: "Assets/Pics/Productos/Sobres/night wanderer booster pack.webp",
     },
 
     {
         id: 6,
-        name: "Raging Surf JPN Booster",
+        name: "Raging Surf (JP) - Booster",
         price: "7000",
         img: "Assets/Pics/Productos/Sobres/raging surf booster pack.webp",
     },
 
     {
         id: 8,
-        name: "Black Flame JPN Booster",
+        name: "Black Flame (JP) - Booster",
         price: "9000",
         img: "Assets/Pics/Productos/Sobres/Ruler-of-the-black-flame-booster-pack.webp",
     },
     {
         id: 10,
-        name: "Surging Sparks JPN Booster",
+        name: "Surging Sparks (JP) - Booster",
         price: "9000",
         img: "Assets/Pics/Productos/Sobres/Super_Electric_Booster_Pack.webp",
     },
     {
         id: 9,
-        name: "Shiny Treasure JPN Booster",
+        name: "Shiny Treasure (JP) - Booster",
         price: "20000",
         img: "Assets/Pics/Productos/Sobres/Shining Treasures.webp",
     },
     {
         id: 11,
         name: "VSTAR Universe (JP) - Booster",
-        price: "24.999ARS",
+        price: "36000",
         img: "Assets/Pics/Productos/Sobres/VSTARUNIVERSE_FOTO.png",
     },
     {
         id:13,
-        name:"Snow Hazard JPN Booster",
+        name:"Snow Hazard (JP) - Booster",
         price:"6000",
         img:"Assets/Pics/Productos/Sobres/snow-hazard-booster.webp",
     },
@@ -135,7 +135,7 @@ function createProduct(productData) {
 
     const productPrice = document.createElement("p");
     productPrice.classList.add("product-price");
-    productPrice.innerHTML = `$${productData.price}`;
+    productPrice.innerHTML = `$${productData.price}ARS`;
 
     const btn = document.createElement("button");
     btn.type = "button";
