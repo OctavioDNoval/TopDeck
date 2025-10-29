@@ -1,7 +1,7 @@
 const products = [
     {
         id: 11,
-        name: "Pokémon - VSTAR Universe (JP) Booster Pack",
+        name: "Pokémon TCG - VSTAR Universe (JP) Booster Pack",
         price: "36000",
         img: "Assets/Pics/Productos/Sobres/VSTARUNIVERSE_FOTO.png",
     },
@@ -13,55 +13,55 @@ const products = [
     },*/
     {
         id: 2,
-        name: "DBS Fusion World - Ultra Limit (JP) Booster Pack",
+        name: "DBS Fusion World TCG - Beyond the Limits (JP) Booster Pack",
         price: "7000",
         img: "Assets/Pics/Productos/Sobres/DB_FB04_FOTO.webp",
     },
     {
         id: 12,
-        name: "One Piece - Anime 25th Collection (JP) Booster Pack",
+        name: "One Piece TCG - Anime 25th Collection (JP) Booster Pack",
         price: "9000",
         img: "Assets/Pics/Productos/Sobres/OP_25TH_FOTO.webp",
     },
     {
         id: 7,
-        name: "Pokémon - Glory of the Team Rocket (JP) - Booster Pack",
+        name: "Pokémon TCG - Glory of the Team Rocket (JP) - Booster Pack",
         price: "12000",
         img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
     },
     {
         id: 1,
-        name: "Pokémon - Terastal Festival (JP) - Booster Pack",
+        name: "Pokémon TCG - Terastal Festival (JP) - Booster Pack",
         price: "30000",
         img: "Assets/Pics/Productos/Sobres/TERASTALFESTIVAL_FOTO.webp",
     },
 
     {
         id: 3,
-        name: "Pokémon - Pokémon GO (JP) - Booster Pack",
+        name: "Pokémon TCG - Pokémon GO (JP) - Booster Pack",
         price: "14000",
         img: "Assets/Pics/Productos/Sobres/POKEGO_FOTO.webp",
     },
     {
         id: 4,
-        name: "Pokémon - Night Wanderer (JP) - Booster Pack",
+        name: "Pokémon TCG - Night Wanderer (JP) - Booster Pack",
         price: "7000",
         img: "Assets/Pics/Productos/Sobres/NIGHTWANDERER_FOTO.webp",
     },
 
-    /*{
+    {
         id: 6,
-        name: "Raging Surf (JP) - Booster",
-        price: "7000",
-        img: "Assets/Pics/Productos/Sobres/raging surf booster pack.webp",
+        name: "Pokémon TCG - Super Electric Breaker (JP) - Booster Pack",
+        price: "9000",
+        img: "Assets/Pics/Productos/Sobres/SUPERELECTRICBREAKER_FOTO.webp",
     },
 
     {
         id: 8,
-        name: "Black Flame (JP) - Booster",
-        price: "9000",
-        img: "Assets/Pics/Productos/Sobres/Ruler-of-the-black-flame-booster-pack.webp",
-    },
+        name: "Pokémon TCG - Battle Partners (JP) - Booster Pack",
+        price: "7000",
+        img: "Assets/Pics/Productos/Sobres/BATTLEPARTNERS_FOTO.webp",
+    },/*
     {
         id: 10,
         name: "Surging Sparks (JP) - Booster",
