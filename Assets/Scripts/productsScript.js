@@ -71,7 +71,7 @@ const products = [
     {
         id: 11,
         name: "VSTAR Universe (JP) - Booster",
-        price: "$24.999ARS",
+        price: "24.999ARS",
         img: "Assets/Pics/Productos/Sobres/VSTARUNIVERSE_FOTO.png",
     },
     {
