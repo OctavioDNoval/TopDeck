@@ -55,7 +55,7 @@ const products = [
         id: 010011,
         name: "Pokémon TCG - White Flare (JP) - Booster Pack",
         price: "12000",
-        img: "Assets/Pics/Productos/Sobres/WHITEFLARE.webp",
+        img: "Assets/Pics/Productos/Sobres/WHITEFLARE_FOTO.webp",
     },
     {
         id: 010008,
