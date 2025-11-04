@@ -58,27 +58,27 @@ const products = [
         img: "Assets/Pics/Productos/Sobres/WHITEFLARE_FOTO.webp",
     },
     {
-        id: 010008,
-        name: "Pokémon TCG - Glory of the Team Rocket (JP) - Booster Pack",
-        price: "12000",
-        img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
-    },
-    {
         id: 010009,
         name: "Pokémon TCG - Mega Inferno X (JP) - Booster Pack",
         price: "12000",
-        img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
+        img: "Assets/Pics/Productos/Sobres/INFERNOX_FOTO.webp",
     },
     {
         id: 010006,
         name: "Pokémon TCG - Mega Brave (JP) - Booster Pack",
         price: "10000",
-        img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
+        img: "Assets/Pics/Productos/Sobres/BRAVE_FOTO.webp",
     },
     {
         id: 010007,
         name: "Pokémon TCG - Mega Symphonia (JP) - Booster Pack",
         price: "10000",
+        img: "Assets/Pics/Productos/Sobres/SYMPHONIA_FOTO.webp",
+    },
+    {
+        id: 010008,
+        name: "Pokémon TCG - Glory of the Team Rocket (JP) - Booster Pack",
+        price: "12000",
         img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
     },
     {
