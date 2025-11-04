@@ -151,6 +151,18 @@ const extra = [
         price: "30000",
         img: "Assets/pics/Productos/Sobres/TERRARIUM13_FOTO.webp",
     },
+    {
+        id: 3,
+        name: "Figura Pokémon - Little Night - Re-Ment (x1 Fig. Aleatoria)",
+        price: "30000",
+        img: "Assets/pics/Productos/Sobres/LITTLENIGHT_FOTO.webp",
+    },
+    {
+        id: 3,
+        name: "Figura Pokémon - Pocket BONSAI Vol. 2 - Re-Ment (x1 Fig. Aleatoria)",
+        price: "30000",
+        img: "Assets/pics/Productos/Sobres/BONSAI2_FOTO.webp",
+    },
     /*{
         id: 4,
         name: "Cartuchera Pikachu",
