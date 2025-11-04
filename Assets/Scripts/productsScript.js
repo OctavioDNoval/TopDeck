@@ -1,67 +1,117 @@
 const products = [
+    //ID: Fromato XXXXXX, ej 010001. Primeros 2 digitos son el tipo. 01 = Pokemon | 02 = One Piece | 03 = Dragon Ball ... Los otros digitos suben a medida que se agreguen productos | LISTA COMPLETA EN DISCORD
+    //SOBRES DESTACADOS (PRIMEROS 3)
     {
-        id: 11,
+        id: 010015,
         name: "Pokémon TCG - VSTAR Universe (JP) Booster Pack",
         price: "36000",
         img: "Assets/Pics/Productos/Sobres/VSTARUNIVERSE_FOTO.png",
     },
-    /*{
-        id: 5,
-        name: "151 (JP) - Booster Pack",
-        price: "26000",
-        img: "Assets/Pics/Productos/Sobres/Pokemon-151-Booster-Pack.webp",
-    },*/
     {
-        id: 2,
+        id: 030001,
         name: "DBS Fusion World TCG - Beyond the Limits (JP) Booster Pack",
         price: "7000",
         img: "Assets/Pics/Productos/Sobres/DB_FB04_FOTO.webp",
     },
     {
-        id: 12,
+        id: 020001,
         name: "One Piece TCG - Anime 25th Collection (JP) Booster Pack",
         price: "9000",
         img: "Assets/Pics/Productos/Sobres/OP_25TH_FOTO.webp",
     },
+    //SOBRES HIGH-END
     {
-        id: 7,
-        name: "Pokémon TCG - Glory of the Team Rocket (JP) - Booster Pack",
-        price: "12000",
-        img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
-    },
-    {
-        id: 1,
-        name: "Pokémon TCG - Terastal Festival (JP) - Booster Pack",
-        price: "30000",
-        img: "Assets/Pics/Productos/Sobres/TERASTALFESTIVAL_FOTO.webp",
-    },
-
-    {
-        id: 3,
+        id: 010016,
         name: "Pokémon TCG - Pokémon GO (JP) - Booster Pack",
         price: "14000",
         img: "Assets/Pics/Productos/Sobres/POKEGO_FOTO.webp",
     },
     {
-        id: 4,
-        name: "Pokémon TCG - Night Wanderer (JP) - Booster Pack",
-        price: "7000",
-        img: "Assets/Pics/Productos/Sobres/NIGHTWANDERER_FOTO.webp",
+        id: 010012,
+        name: "Pokémon TCG - 151 (JP) - Booster Pack",
+        price: "26000",
+        img: "Assets/Pics/Productos/Sobres/TERASTALFESTIVAL_FOTO.webp",
     },
-
     {
-        id: 6,
+        id: 010013,
+        name: "Pokémon TCG - Terastal Festival (JP) - Booster Pack",
+        price: "30000",
+        img: "Assets/Pics/Productos/Sobres/TERASTALFESTIVAL_FOTO.webp",
+    },
+    {
+        id: 010014,
+        name: "Pokémon TCG - Shiny Treasure ex (JP) - Booster Pack",
+        price: "32000",
+        img: "Assets/Pics/Productos/Sobres/TERASTALFESTIVAL_FOTO.webp",
+    },
+    //SOBRES NORMALES - ORDEN: POKEMON -> ONE PIECE -> DRAGON BALL
+    {
+        id: 010010,
+        name: "Pokémon TCG - Black Bolt (JP) - Booster Pack",
+        price: "12000",
+        img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
+    },
+    {
+        id: 010011,
+        name: "Pokémon TCG - White Flare (JP) - Booster Pack",
+        price: "12000",
+        img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
+    },
+    {
+        id: 010008,
+        name: "Pokémon TCG - Glory of the Team Rocket (JP) - Booster Pack",
+        price: "12000",
+        img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
+    },
+    {
+        id: 010009,
+        name: "Pokémon TCG - Mega Inferno X (JP) - Booster Pack",
+        price: "12000",
+        img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
+    },
+    {
+        id: 010006,
+        name: "Pokémon TCG - Mega Brave (JP) - Booster Pack",
+        price: "10000",
+        img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
+    },
+    {
+        id: 010007,
+        name: "Pokémon TCG - Mega Symphonia (JP) - Booster Pack",
+        price: "10000",
+        img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
+    },
+    {
+        id: 010004,
+        name: "Pokémon TCG - Ruler of the Black Flame (JP) - Booster Pack",
+        price: "9000",
+        img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
+    },
+    {
+        id: 010005,
         name: "Pokémon TCG - Super Electric Breaker (JP) - Booster Pack",
         price: "9000",
         img: "Assets/Pics/Productos/Sobres/SUPERELECTRICBREAKER_FOTO.webp",
     },
-
     {
-        id: 8,
+        id: 010003,
+        name: "Pokémon TCG - Raging Surf (JP) - Booster Pack",
+        price: "7000",
+        img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
+    },
+    {
+        id: 010002,
         name: "Pokémon TCG - Battle Partners (JP) - Booster Pack",
         price: "7000",
         img: "Assets/Pics/Productos/Sobres/BATTLEPARTNERS_FOTO.webp",
-    },/*
+    },
+    {
+        id: 010001,
+        name: "Pokémon TCG - Night Wanderer (JP) - Booster Pack",
+        price: "6000",
+        img: "Assets/Pics/Productos/Sobres/NIGHTWANDERER_FOTO.webp",
+    },
+    /*
     {
         id: 10,
         name: "Surging Sparks (JP) - Booster",
