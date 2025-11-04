@@ -85,7 +85,7 @@ const products = [
         id: 010004,
         name: "Pokémon TCG - Ruler of the Black Flame (JP) - Booster Pack",
         price: "9000",
-        img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
+        img: "Assets/Pics/Productos/Sobres/RULER_FOTO.webp",
     },
     {
         id: 010005,
@@ -97,7 +97,7 @@ const products = [
         id: 010003,
         name: "Pokémon TCG - Raging Surf (JP) - Booster Pack",
         price: "7000",
-        img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
+        img: "Assets/Pics/Productos/Sobres/RAGINGSURF_FOTO.webp",
     },
     {
         id: 010002,
