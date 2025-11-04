@@ -21,16 +21,10 @@ const products = [
     },
     //SOBRES HIGH-END
     {
-        id: 010016,
-        name: "Pokémon TCG - Pokémon GO (JP) - Booster Pack",
-        price: "14000",
-        img: "Assets/Pics/Productos/Sobres/POKEGO_FOTO.webp",
-    },
-    {
         id: 010012,
         name: "Pokémon TCG - 151 (JP) - Booster Pack",
         price: "26000",
-        img: "Assets/Pics/Productos/Sobres/TERASTALFESTIVAL_FOTO.webp",
+        img: "Assets/Pics/Productos/Sobres/151_FOTO.webp",
     },
     {
         id: 010013,
@@ -42,20 +36,26 @@ const products = [
         id: 010014,
         name: "Pokémon TCG - Shiny Treasure ex (JP) - Booster Pack",
         price: "32000",
-        img: "Assets/Pics/Productos/Sobres/TERASTALFESTIVAL_FOTO.webp",
+        img: "Assets/Pics/Productos/Sobres/SHINYTREASURE_FOTO.webp",
+    },
+    {
+        id: 010016,
+        name: "Pokémon TCG - Pokémon GO (JP) - Booster Pack",
+        price: "14000",
+        img: "Assets/Pics/Productos/Sobres/POKEGO_FOTO.webp",
     },
     //SOBRES NORMALES - ORDEN: POKEMON -> ONE PIECE -> DRAGON BALL
     {
         id: 010010,
         name: "Pokémon TCG - Black Bolt (JP) - Booster Pack",
         price: "12000",
-        img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
+        img: "Assets/Pics/Productos/Sobres/BLACKBOLT_FOTO.webp",
     },
     {
         id: 010011,
         name: "Pokémon TCG - White Flare (JP) - Booster Pack",
         price: "12000",
-        img: "Assets/Pics/Productos/Sobres/GLORYTEAMROCKET_FOTO.webp",
+        img: "Assets/Pics/Productos/Sobres/WHITEFLARE.webp",
     },
     {
         id: 010008,
