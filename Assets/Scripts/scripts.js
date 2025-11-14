@@ -1,7 +1,7 @@
 const cartElemnt = document.getElementById("cart");
 const cartSection = document.getElementById("carrito-section");
 const footer = document.getElementById("footer");
-const phoneNumber = "+5492236352642";
+const phoneNumber = "+5492233051617";
 
 function isEmptyArray(array) {
 	return array.length === 0;
