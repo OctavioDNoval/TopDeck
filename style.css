@@ -511,6 +511,66 @@ main h2 {
     }
 }
 
+
+/*--------------------FILTER INPUT---------------------*/
+
+.filter-input {
+    width: 100%;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+#filter-form {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+#filter {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#filter:focus {
+    border-color: var(--secondary-color);
+}
+
+#filter-form button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#filter-form button:hover {
+    background-color: #333333;
+}
+
+#filter-form button:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 480px) {
+    #filter-form {
+        flex-direction: column;
+    }
+    
+    #filter-form button {
+        width: 100%;
+    }
+}
+
 /*--------------------KEYFRAMES----------------------*/
 
 @keyframes aparecer {

@@ -112,24 +112,24 @@ const products = [
 		img: "Assets/Pics/Productos/Sobres/NIGHTWANDERER_FOTO.webp",
 	},
 	/*
-    {
-        id: 10,
-        name: "Surging Sparks (JP) - Booster",
-        price: "9000",
-        img: "Assets/Pics/Productos/Sobres/Super_Electric_Booster_Pack.webp",
-    },
-    {
-        id: 9,
-        name: "Shiny Treasure (JP) - Booster",
-        price: "20000",
-        img: "Assets/Pics/Productos/Sobres/Shining Treasures.webp",
-    },
-    {
-        id:13,
-        name:"Snow Hazard (JP) - Booster",
-        price:"6000",
-        img:"Assets/Pics/Productos/Sobres/snow-hazard-booster.webp",
-    },*/
+	{
+		id: 10,
+		name: "Surging Sparks (JP) - Booster",
+		price: "9000",
+		img: "Assets/Pics/Productos/Sobres/Super_Electric_Booster_Pack.webp",
+	},
+	{
+		id: 9,
+		name: "Shiny Treasure (JP) - Booster",
+		price: "20000",
+		img: "Assets/Pics/Productos/Sobres/Shining Treasures.webp",
+	},
+	{
+		id:13,
+		name:"Snow Hazard (JP) - Booster",
+		price:"6000",
+		img:"Assets/Pics/Productos/Sobres/snow-hazard-booster.webp",
+	},*/
 ];
 
 const extra = [
@@ -164,18 +164,22 @@ const extra = [
 		img: "Assets/pics/Productos/Sobres/BONSAI2_FOTO.webp",
 	},
 	/*{
-        id: 4,
-        name: "Cartuchera Pikachu",
-        price: "40000",
-        img: "Assets/pics/Productos/Extras/cartuchera_pokemon.webp",
-    },
-    {
-        id: 5,
-        name: "Terrarium Collection x1 ",
-        price: "22000",
-        img: "Assets/pics/Productos/Extras/esferas.webp",
-    },*/
+		id: 4,
+		name: "Cartuchera Pikachu",
+		price: "40000",
+		img: "Assets/pics/Productos/Extras/cartuchera_pokemon.webp",
+	},
+	{
+		id: 5,
+		name: "Terrarium Collection x1 ",
+		price: "22000",
+		img: "Assets/pics/Productos/Extras/esferas.webp",
+	},*/
 ];
+
+let currentFilterText = '';
+let filteredProducts = [...products];
+let filteredExtras = [...extra];
 
 const mediaQuery = window.matchMedia("(min-width: 760px)");
 // Funcion para crear un producto cualquiera ya sea un sobre o algunos de los "extra"
@@ -332,19 +336,16 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 });
 
-const sortProducts = document.getElementById("sort-products");
-sortProducts.addEventListener("change", (e) => {
+document.getElementById('sort-products').addEventListener('change', (e) => {
 	sortAndRenderProducts(e.target.value);
 });
 
-const sortExtra = document.getElementById("sort-extra");
-sortExtra.addEventListener("change", (e) => {
+document.getElementById('sort-extra').addEventListener('change', (e) => {
 	sortAndRenderExtras(e.target.value);
 });
 
 function sortAndRenderProducts(option) {
-	let sortedProducts = [...products];
-	const productSection = document.getElementById("product-section");
+	let sortedProducts = [...filteredProducts];
 
 	switch (option) {
 		case "Precio-mayor":
@@ -358,23 +359,20 @@ function sortAndRenderProducts(option) {
 			break;
 		case "relevancia":
 		default:
-			sortedProducts = [...products];
+			sortedProducts = [...filteredProducts];
 			break;
 	}
 
-	const renderProduct = (item) => {
-		const newProduct = createProduct(item);
-		productSection.appendChild(newProduct);
-	};
-
+	const productSection = document.getElementById("product-section");
 	productSection.innerHTML = "";
-	if (mediaQuery.matches) {
-		sortedProducts.forEach(renderProduct);
-	} else {
-		sortedProducts.slice(0, 2).forEach(renderProduct);
 
-		viewMore = createViewMoreButton(sortedProducts, productSection, 2, "extra");
-		viewLess = createViewLessButton(productSection, "extra");
+	if (mediaQuery.matches) {
+		sortedProducts.forEach(item => productSection.appendChild(createProduct(item)));
+	} else {
+		sortedProducts.slice(0, 2).forEach(item => productSection.appendChild(createProduct(item)));
+
+		const viewMore = createViewMoreButton(sortedProducts, productSection, 2, "extra");
+		const viewLess = createViewLessButton(productSection, "extra");
 
 		productSection.appendChild(viewMore);
 		productSection.appendChild(viewLess);
@@ -382,8 +380,7 @@ function sortAndRenderProducts(option) {
 }
 
 function sortAndRenderExtras(option) {
-	let sortedExtras = [...extra];
-	const extraSection = document.getElementById("extras-section");
+	let sortedExtras = [...filteredExtras];
 
 	switch (option) {
 		case "Precio-mayor":
@@ -397,25 +394,71 @@ function sortAndRenderExtras(option) {
 			break;
 		case "relevancia":
 		default:
-			sortedExtras = [...extra];
+			sortedExtras = [...filteredExtras];
 			break;
 	}
 
-	const renderExtra = (item) => {
-		const newExtra = createProduct(item);
-		extraSection.appendChild(newExtra);
-	};
-
+	const extraSection = document.getElementById("extras-section");
 	extraSection.innerHTML = "";
-	if (mediaQuery.matches) {
-		sortedExtras.forEach(renderExtra);
-	} else {
-		sortedExtras.slice(0, 2).forEach(renderExtra);
 
-		viewMore = createViewMoreButton(sortedExtras, extraSection, 2, "extraE");
-		viewLess = createViewLessButton(extraSection, "extraE");
+	if (mediaQuery.matches) {
+		sortedExtras.forEach(item => extraSection.appendChild(createProduct(item)));
+	} else {
+		sortedExtras.slice(0, 2).forEach(item => extraSection.appendChild(createProduct(item)));
+
+		const viewMore = createViewMoreButton(sortedExtras, extraSection, 2, "extraE");
+		const viewLess = createViewLessButton(extraSection, "extraE");
 
 		extraSection.appendChild(viewMore);
 		extraSection.appendChild(viewLess);
 	}
 }
+
+function applyFilterAndSort() {
+
+	if (currentFilterText === '') {
+		filteredProducts = [...products];
+		filteredExtras = [...extra];
+	} else {
+		const text = currentFilterText.toLowerCase();
+		filteredProducts = products.filter(p => p.name.toLowerCase().includes(text));
+		filteredExtras = extra.filter(e => e.name.toLowerCase().includes(text));
+	}
+
+
+	const sortProductsValue = document.getElementById('sort-products').value;
+	const sortExtraValue = document.getElementById('sort-extra').value;
+
+	sortAndRenderProducts(sortProductsValue);
+	sortAndRenderExtras(sortExtraValue);
+}
+
+function applyFilterAndSort() {
+
+	if (currentFilterText === '') {
+		filteredProducts = [...products];
+		filteredExtras = [...extra];
+	} else {
+		const text = currentFilterText.toLowerCase();
+		filteredProducts = products.filter(p => p.name.toLowerCase().includes(text));
+		filteredExtras = extra.filter(e => e.name.toLowerCase().includes(text));
+	}
+
+
+	const sortProductsValue = document.getElementById('sort-products').value;
+	const sortExtraValue = document.getElementById('sort-extra').value;
+
+	sortAndRenderProducts(sortProductsValue);
+	sortAndRenderExtras(sortExtraValue);
+}
+
+function filterByInput(event) {
+	event.preventDefault();
+
+	const input = document.getElementById('filter');
+	currentFilterText = input.value.trim();
+
+	applyFilterAndSort();
+}
+
+document.getElementById('filter-form').addEventListener('submit', filterByInput);
